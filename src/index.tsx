@@ -1,4 +1,6 @@
 class App {
+    public run: () => void;
+
     constructor() {
         this.run = (name = 'Michael') => {
 
