@@ -1,27 +1,18 @@
-const path = require('path');
+const PATHS = require('./webpack.paths.conf');
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: [
-            './src/index.tsx'
-        ]
+        app: PATHS.src + '/index.tsx'
     },
 
     output: {
-        filename: 'js/app.js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: PATHS.outputApp,
+        path: PATHS.dist,
         publicPath: ''
-    },
-
-    devServer: {
-        overlay: true,
-        stats: 'errors-only',
-        contentBase: './public',
-        port: 3000
     },
 
     module: {
@@ -56,7 +47,12 @@ module.exports = {
                     },
                     {
                         loader: 'postcss-loader',
-                        options: { sourceMap: true }
+                        options: { 
+                            sourceMap: true,
+                            config: {
+                                path: `${__dirname}/postcss.config.js`
+                            }
+                        }
                     },
                     {
                         loader: 'sass-loader',
@@ -97,8 +93,15 @@ module.exports = {
 
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: '/node-modules/'
+                exclude: '/node-modules/',
+                use: [
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            configFile: 'config/tsconfig.json'
+                        },
+                    }
+                ]
             }
         ],
     },
@@ -108,10 +111,10 @@ module.exports = {
     },
 
     plugins: [
-        new MiniCssExtractPlugin({ filename: './css/main.css' }),
+        new MiniCssExtractPlugin({ filename: PATHS.outputStyle }),
         new HtmlWebpackPlugin({
             hash: false,
-            template: './public/index.html',
+            template: PATHS.public + '/index.html',
             filename: 'index.html'
         }),
         new CleanWebpackPlugin(),
