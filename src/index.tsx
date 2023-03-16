@@ -1,13 +1,16 @@
-class App {
-    public run: () => void;
+import React, { FC } from "react";
+import ReactDOM from "react-dom/client";
+import { Header, Offer } from "./views";
 
-    constructor() {
-        this.run = (name = 'Michael') => {
+const App: FC = () => {
+  return (
+    <div>
+      <Header />
+      <Offer />
+    </div>
+  );
+};
 
-            console.log(`Hello ${name}`);
-        }
-    }
-}
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 
-const app = new App();
-app.run();
+root.render(<App />);
