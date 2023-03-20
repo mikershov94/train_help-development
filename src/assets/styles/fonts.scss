@@ -1,0 +1,42 @@
+@mixin font-h1($weight: 900, $lh: 120px, $align: center) {
+  font-family: "Roboto", sans-serif;
+  font-size: 120px;
+  font-weight: $weight;
+  line-height: $lh;
+  text-align: $align;
+}
+
+@mixin font-h2($weight: 500, $lh: 96px) {
+  font-family: "Roboto", sans-serif;
+  font-size: 96px;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin font-h3($weight: 500, $lh: 46px) {
+  font-family: "Roboto", sans-serif;
+  font-size: 46px;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin font-h4($weight: 400, $lh: 39px) {
+  font-family: "Roboto", sans-serif;
+  font-size: 39px;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin font-p1($weight: 400, $lh: 34.05px) {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin font-p2($weight: 300, $lh: 25.14px) {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: $weight;
+  line-height: $lh;
+}
