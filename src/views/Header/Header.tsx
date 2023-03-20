@@ -7,7 +7,7 @@ const Header: FC = () => {
     <header className="page-header">
       <header className="page-header__header">
         <div className="logo">
-          <img className="logo__logo" />
+          {/* <img className="logo__logo" src="/public/images/Logo.png" /> */}
           <h2 className="logo__label"></h2>
         </div>
         <div className="contacts">
