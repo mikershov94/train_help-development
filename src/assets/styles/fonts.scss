@@ -27,14 +27,14 @@
   line-height: $lh;
 }
 
-@mixin font-p1($weight: 400, $lh: 34.05px) {
+@mixin font-h5($weight: 400, $lh: 34.05px) {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   font-weight: $weight;
   line-height: $lh;
 }
 
-@mixin font-p2($weight: 300, $lh: 25.14px) {
+@mixin font-p($weight: 300, $lh: 25.14px) {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: $weight;
