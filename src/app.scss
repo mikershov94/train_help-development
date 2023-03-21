@@ -1,28 +1,36 @@
 @import "./assets/styles/colors.scss";
 @import "./assets/styles/fonts.scss";
 
+html,
 body {
   h1 {
     @include font-h1();
+    margin: 0;
   }
 
   h2 {
     @include font-h2();
+    margin: 0;
   }
 
   h3 {
     @include font-h3();
+    margin: 0;
   }
 
   h4 {
     @include font-h4();
+    margin: 0;
   }
 
   h5 {
     @include font-h5();
+    margin: 0;
   }
 
   @include font-p();
 
   margin: 0;
+  padding: 0;
+  height: 100%;
 }

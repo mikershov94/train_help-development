@@ -5,9 +5,13 @@ import "./Header.scss";
 const Header: FC = () => {
   return (
     <header className="page-header">
-      <header className="page-header__header">
+      <div className="page-header__header">
         <div className="logo">
-          {/* <img className="logo__logo" src="/public/images/Logo.png" /> */}
+          <img
+            className="logo__logo"
+            src="../../../public/images.png"
+            alt="logo"
+          />
           <h2 className="logo__label"></h2>
         </div>
         <div className="contacts">
@@ -19,11 +23,11 @@ const Header: FC = () => {
           </a>
         </div>
         <button>Заказать звонок</button>
-      </header>
+      </div>
       <footer className="page-header__footer">
         <nav>
-          <svg>-</svg>
-          <ul>
+          {/* <svg>-</svg> */}
+          <ul className="page-header__nav-items">
             <li>Услуги</li>
             <li>О компании</li>
             <li>Отзывы</li>

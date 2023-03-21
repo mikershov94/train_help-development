@@ -1,6 +1,17 @@
 @import "/src/assets/styles/colors.scss";
 
 .page-header {
+  overflow: hidden;
   height: 124px;
+  width: 100%;
   background-color: $black;
+
+  &__footer {
+    display: flex;
+    color: $white;
+  }
+
+  &__nav-items {
+    display: flex;
+  }
 }
