@@ -70,15 +70,16 @@ module.exports = {
 
             {
                 test: /\.(png|gif|jpe?g)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: { name: '[path][name].[ext]' }
-                    },
-                    {
-                        loader: 'img-loader'
-                    },
-                ]
+                type: 'asset/resource',
+                // use: [
+                //     {
+                //         loader: 'file-loader',
+                //         options: { name: '[path][name].[ext]' }
+                //     },
+                //     {
+                //         loader: 'img-loader'
+                //     },
+                // ]
             },
 
             {

@@ -1,4 +1,5 @@
 import React, { FC, memo } from "react";
+import Logo from "../../components";
 
 import "./Header.scss";
 
@@ -7,12 +8,9 @@ const Header: FC = () => {
     <header className="page-header">
       <div className="page-header__header">
         <div className="logo">
-          <img
-            className="logo__logo"
-            src="../../../public/images.png"
-            alt="logo"
-          />
-          <h2 className="logo__label"></h2>
+          <img className="logo__logo-title" src="images/Logo.png" alt="logo" />
+          <div className="logo__logo-line" />
+          <h2 className="logo__description"></h2>
         </div>
         <div className="contacts">
           <a className="contacts__phone" href="tel:+74951776596">
