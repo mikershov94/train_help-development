@@ -1,0 +1,35 @@
+@import "/src/assets/styles/colors.scss";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__title-container {
+    position: relative;
+  }
+
+  &__logo-line {
+    width: 79.79px;
+    height: 10.34px;
+    background-color: $yellow;
+    position: absolute;
+    top: 5px;
+    left: 50px;
+  }
+
+  &__separator {
+    width: 0.98px;
+    height: 55px;
+    background-color: $white;
+    margin: 0 15px;
+  }
+
+  &__description {
+    color: $white;
+    font-size: 12px;
+    font-weight: 300;
+    width: 188px;
+    margin: 0;
+    line-height: 16px;
+  }
+}

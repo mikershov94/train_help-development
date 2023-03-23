@@ -1,0 +1,12 @@
+@import "/src/assets/styles/colors.scss";
+@import "/src/assets/styles/fonts.scss";
+
+.contacts {
+  margin: 0 33px;
+
+  a {
+    color: $white;
+    @include font-p(700);
+    display: block;
+  }
+}

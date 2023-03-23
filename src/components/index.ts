@@ -1,3 +1,4 @@
 import Logo from "./Logo";
+import Contacts from "./Contacts";
 
-export { Logo };
+export { Logo, Contacts };

@@ -1,10 +1,18 @@
 @import "/src/assets/styles/colors.scss";
+@import "/src/assets/styles/fonts.scss";
 
 .page-header {
   overflow: hidden;
   height: 124px;
   width: 100%;
   background-color: $black;
+  padding: 24px 0 0;
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__footer {
     display: flex;
@@ -13,5 +21,29 @@
 
   &__nav-items {
     display: flex;
+  }
+
+  &__right-container {
+    display: flex;
+  }
+
+  &__call-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    color: $yellow;
+    border: 1px solid $yellow;
+    border-radius: 1px;
+    @include font-p(700);
+    font-size: 16px;
+    padding: 9px 23px 9px 23px;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: $yellow;
+      color: $black;
+    }
   }
 }
