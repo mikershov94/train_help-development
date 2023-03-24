@@ -1,0 +1,12 @@
+@import "/src//assets/styles/colors.scss";
+
+.offer {
+  height: 747px;
+  background-color: $yellow;
+  padding: 161px 0 0;
+
+  &__header {
+    width: 860px;
+    margin: 0 auto;
+  }
+}
