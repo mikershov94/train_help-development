@@ -1,5 +1,6 @@
 @import "/src/assets/styles/colors.scss";
 @import "/src/assets/styles/fonts.scss";
+@import "/src/assets/styles/mixins.scss";
 
 .page-header {
   overflow: hidden;
@@ -12,15 +13,32 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin: 0 0 20px;
   }
 
   &__footer {
     display: flex;
+    justify-content: space-between;
     color: $white;
+  }
+
+  &__nav {
+    display: flex;
   }
 
   &__nav-items {
     display: flex;
+    @include nonStyleList();
+    margin: 0 -30px;
+  }
+
+  &__nav-item {
+    padding: 0 40px;
+    cursor: pointer;
+
+    &:hover {
+      color: $yellow;
+    }
   }
 
   &__right-container {

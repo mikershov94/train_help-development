@@ -1,0 +1,32 @@
+@mixin button() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+}
+
+@mixin nonStyleList() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin nonStyleInput() {
+  input {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+}

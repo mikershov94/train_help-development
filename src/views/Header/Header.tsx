@@ -1,5 +1,6 @@
 import React, { FC, memo } from "react";
-import { Contacts, Logo } from "../../components";
+import { Burger, Contacts, Logo } from "../../components";
+import Search from "../../components/Search";
 
 import "./Header.scss";
 
@@ -7,29 +8,26 @@ const Header: FC = () => {
   return (
     <header className="page-header">
       <div className="container">
-        <header className="page-header__header">
+        <div className="page-header__header">
           <Logo />
           <div className="page-header__right-container">
             <Contacts />
             <button className="page-header__call-btn">Заказать звонок</button>
           </div>
-        </header>
-        <footer className="page-header__footer">
-          <nav>
-            {/* <svg>-</svg> */}
+        </div>
+        <div className="page-header__footer">
+          <nav className="page-header__nav">
+            <Burger />
             <ul className="page-header__nav-items">
-              <li>Услуги</li>
-              <li>О компании</li>
-              <li>Отзывы</li>
-              <li>Статьи</li>
-              <li>Контакты</li>
+              <li className="page-header__nav-item">Услуги</li>
+              <li className="page-header__nav-item">О компании</li>
+              <li className="page-header__nav-item">Отзывы</li>
+              <li className="page-header__nav-item">Статьи</li>
+              <li className="page-header__nav-item">Контакты</li>
             </ul>
           </nav>
-          <div className="page-header__search">
-            <input type="search" />
-            <span>Значок лупы</span>
-          </div>
-        </footer>
+          <Search placeholder="найти на сайте..." />
+        </div>
       </div>
     </header>
   );
