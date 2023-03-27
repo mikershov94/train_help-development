@@ -1,6 +1,8 @@
 @import "/src//assets/styles/colors.scss";
+@import "/src//assets/styles/fonts.scss";
 
 .offer {
+  position: relative;
   height: 747px;
   background-color: $yellow;
   padding: 161px 0 0;
@@ -8,5 +10,82 @@
   &__header {
     width: 860px;
     margin: 0 auto;
+  }
+
+  &__pointer-horizontal-1 {
+    width: 230px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    top: 109px;
+    left: 341px;
+  }
+
+  &__pointer-rotated-1 {
+    width: 36px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    top: 121.4px;
+    left: 565.5px;
+    transform: rotate(45deg);
+  }
+
+  &__pointer-horizontal-2 {
+    width: 250px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    top: 109px;
+    right: 316px;
+  }
+
+  &__pointer-rotated-2 {
+    width: 93px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    top: 132px;
+    right: 559px;
+    transform: rotate(-30deg);
+  }
+
+  &__pointer-horizontal-3 {
+    width: 250px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    bottom: 386px;
+    left: 315px;
+  }
+
+  &__pointer-rotated-3 {
+    width: 93px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    bottom: 409px;
+    left: 558px;
+    transform: rotate(-30deg);
+  }
+
+  &__label-pointer-1 {
+    @include font-p(700);
+    position: absolute;
+    top: 84px;
+    left: 342px;
+  }
+
+  &__label-pointer-2 {
+    @include font-p(700);
+    position: absolute;
+    top: 60px;
+    right: 308px;
+    width: 260px;
+  }
+
+  &__label-pointer-3 {
+    @include font-p(700);
+    position: absolute;
   }
 }
